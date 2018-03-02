@@ -6,7 +6,7 @@ LATEXMK=latexmk
 LATEXMKOPT=-pdf
 
 MAIN=loom-hotcloud
-SOURCES=$(MAIN).tex Makefile abstract.tex intro.tex background.tex future_work.tex motivation.tex relwork.tex setup_and_intro.tex references.bib
+SOURCES=$(MAIN).tex Makefile abstract.tex intro.tex background.tex future_work.tex motivation.tex relwork.tex methodology.tex evaluation.tex references.bib
 FIGURES := $(shell find figures/* images/* -type f)
 
 all:    $(MAIN).pdf

@@ -1,0 +1,26 @@
+Establishing dependencies amongst events is only relevant to distributed executions.
+\begin{itemize}
+\item Since a total order can be established for events on a single thread of execution
+\end{itemize}
+
+The dependencies that we postulate amongst events under consideration should, in the ideal case, be:
+\begin{enumerate}
+\item Sound:  
+All relationships postulated should be true.
+\item Complete:
+All true relationships should be postulated.
+\end{enumerate}
+
+These two requirements are in opposition with each other. 
+
+Two naive approaches:
+\begin{enumerate}
+\item Events only have dependencies on the same node: 
+Sound but not complete. Will miss important dependencies. 
+
+\item Events depend on all preceding events that occurred on a different node: 
+Complete but not sound. Will not miss any dependencies, but dependency graph likely to be extremely dense and unrepresentative of truth.
+\end{enumerate}
+
+We start with the complete dependency graph and try to make it as sound as possible. 
+

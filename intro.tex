@@ -1,0 +1,19 @@
+Having system traces is useful in order to get high level explanations of system outcomes. 
+
+Not all systems have traces - due to instrumentation and performance overloads. 
+
+All systems generate logs of varying levels of details. 
+
+Can we infer potential causal relationships from logs?
+
+Decompose problem into:
+\begin{itemize}
+\item Identifying events 
+\item Establishing dependencies amongst events
+\end{itemize}
+
+If we assume globally unique identifiers at the request level across nodes, the problem of identifying events becomes trivial, but the second problem remains.
+
+If we make the assumption that we are able to run a given workload on a system repeatedly, the key intuition is that the true dependencies of any given event will be present in addition to others. 
+
+We show that we can approach the true set of relationships with a combination of running the system repeatedly and randomly injecting delay on one or more nodes. 

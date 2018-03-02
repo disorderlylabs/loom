@@ -1,0 +1,24 @@
+Usage of time window to decrease number of hypotheses. 
+
+Modules that occur too frequently are removed: 80\% of log lines removed via this technique. 
+
+Challenge: Identifying two events as the same across hypotheses sets
+
+Single key can have multiple key matches.
+
+Approach 1: Selection of specific key based on criteria
+
+Intersection of dependencies with 
+\begin{itemize}
+\item Union of dependencies of all matching keys
+\item Intersection of dependencies of all matching keys
+\item Matching key such that the cardinality of intersection is maximised
+\item Matching key such that the cardinality of intersection is maximised
+\end{itemize}
+
+Approach 2: Weighting
+
+No dependencies are discarded from one run to the next, rather a count of the number of times each dependency is seen is maintained. 
+
+After a certain number of runs, we throw away dependencies that whose number of occurrences falls below a certain threshold
+
